@@ -21,4 +21,4 @@ AirNautis é um sistema capaz de:
 
 #Ecra Inicial
 
-![alt text]()
+![alt text](https://raw.githubusercontent.com/luis-sousa/AirNautis/master/AirNautis.png)
