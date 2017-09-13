@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AirNautisService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:60969/AirNautisService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:60969/AirNautisService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:60969/AirNautisService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/AirNautisService" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IAirNautisService_GetAirplaneById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAirplaneById" />
+  </wsdl:message>
+  <wsdl:message name="IAirNautisService_GetAirplaneById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAirplaneByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAirNautisService_GetAllAirplanes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllAirplanes" />
+  </wsdl:message>
+  <wsdl:message name="IAirNautisService_GetAllAirplanes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllAirplanesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAirNautisService_GetAirplaneTravels_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAirplaneTravels" />
+  </wsdl:message>
+  <wsdl:message name="IAirNautisService_GetAirplaneTravels_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAirplaneTravelsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAirNautisService_GetHangarAirplanes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHangarAirplanes" />
+  </wsdl:message>
+  <wsdl:message name="IAirNautisService_GetHangarAirplanes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHangarAirplanesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAirNautisService_GetOutAirplanes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOutAirplanes" />
+  </wsdl:message>
+  <wsdl:message name="IAirNautisService_GetOutAirplanes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOutAirplanesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAirNautisService_GetAllHangars_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllHangars" />
+  </wsdl:message>
+  <wsdl:message name="IAirNautisService_GetAllHangars_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllHangarsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAirNautisService_GetAvaiableHangars_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAvaiableHangars" />
+  </wsdl:message>
+  <wsdl:message name="IAirNautisService_GetAvaiableHangars_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAvaiableHangarsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAirNautisService_GetActiveAirplanes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetActiveAirplanes" />
+  </wsdl:message>
+  <wsdl:message name="IAirNautisService_GetActiveAirplanes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetActiveAirplanesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAirNautisService_GetInactiveAirplanes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInactiveAirplanes" />
+  </wsdl:message>
+  <wsdl:message name="IAirNautisService_GetInactiveAirplanes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInactiveAirplanesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAirNautisService_GetHangar_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHangar" />
+  </wsdl:message>
+  <wsdl:message name="IAirNautisService_GetHangar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHangarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAirNautisService_GetAirplanesByHangar_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAirplanesByHangar" />
+  </wsdl:message>
+  <wsdl:message name="IAirNautisService_GetAirplanesByHangar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAirplanesByHangarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAirNautisService_GetTravels_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTravels" />
+  </wsdl:message>
+  <wsdl:message name="IAirNautisService_GetTravels_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTravelsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAirNautisService_InsertAirplane_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertAirplane" />
+  </wsdl:message>
+  <wsdl:message name="IAirNautisService_InsertAirplane_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertAirplaneResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAirNautisService_CreateHangar_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateHangar" />
+  </wsdl:message>
+  <wsdl:message name="IAirNautisService_CreateHangar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateHangarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAirNautisService_NewOutgoingTravel_InputMessage">
+    <wsdl:part name="parameters" element="tns:NewOutgoingTravel" />
+  </wsdl:message>
+  <wsdl:message name="IAirNautisService_NewOutgoingTravel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NewOutgoingTravelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAirNautisService_NewIncomingTravel_InputMessage">
+    <wsdl:part name="parameters" element="tns:NewIncomingTravel" />
+  </wsdl:message>
+  <wsdl:message name="IAirNautisService_NewIncomingTravel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NewIncomingTravelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAirNautisService_EditAirplane_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditAirplane" />
+  </wsdl:message>
+  <wsdl:message name="IAirNautisService_EditAirplane_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditAirplaneResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAirNautisService_ActivateAirplane_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActivateAirplane" />
+  </wsdl:message>
+  <wsdl:message name="IAirNautisService_ActivateAirplane_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActivateAirplaneResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAirNautisService_DeactivateAirplane_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeactivateAirplane" />
+  </wsdl:message>
+  <wsdl:message name="IAirNautisService_DeactivateAirplane_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeactivateAirplaneResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IAirNautisService">
+    <wsdl:operation name="GetAirplaneById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAirNautisService/GetAirplaneById" message="tns:IAirNautisService_GetAirplaneById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAirNautisService/GetAirplaneByIdResponse" message="tns:IAirNautisService_GetAirplaneById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllAirplanes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAirNautisService/GetAllAirplanes" message="tns:IAirNautisService_GetAllAirplanes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAirNautisService/GetAllAirplanesResponse" message="tns:IAirNautisService_GetAllAirplanes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAirplaneTravels">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAirNautisService/GetAirplaneTravels" message="tns:IAirNautisService_GetAirplaneTravels_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAirNautisService/GetAirplaneTravelsResponse" message="tns:IAirNautisService_GetAirplaneTravels_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHangarAirplanes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAirNautisService/GetHangarAirplanes" message="tns:IAirNautisService_GetHangarAirplanes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAirNautisService/GetHangarAirplanesResponse" message="tns:IAirNautisService_GetHangarAirplanes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOutAirplanes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAirNautisService/GetOutAirplanes" message="tns:IAirNautisService_GetOutAirplanes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAirNautisService/GetOutAirplanesResponse" message="tns:IAirNautisService_GetOutAirplanes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllHangars">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAirNautisService/GetAllHangars" message="tns:IAirNautisService_GetAllHangars_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAirNautisService/GetAllHangarsResponse" message="tns:IAirNautisService_GetAllHangars_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAvaiableHangars">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAirNautisService/GetAvaiableHangars" message="tns:IAirNautisService_GetAvaiableHangars_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAirNautisService/GetAvaiableHangarsResponse" message="tns:IAirNautisService_GetAvaiableHangars_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActiveAirplanes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAirNautisService/GetActiveAirplanes" message="tns:IAirNautisService_GetActiveAirplanes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAirNautisService/GetActiveAirplanesResponse" message="tns:IAirNautisService_GetActiveAirplanes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInactiveAirplanes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAirNautisService/GetInactiveAirplanes" message="tns:IAirNautisService_GetInactiveAirplanes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAirNautisService/GetInactiveAirplanesResponse" message="tns:IAirNautisService_GetInactiveAirplanes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHangar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAirNautisService/GetHangar" message="tns:IAirNautisService_GetHangar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAirNautisService/GetHangarResponse" message="tns:IAirNautisService_GetHangar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAirplanesByHangar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAirNautisService/GetAirplanesByHangar" message="tns:IAirNautisService_GetAirplanesByHangar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAirNautisService/GetAirplanesByHangarResponse" message="tns:IAirNautisService_GetAirplanesByHangar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTravels">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAirNautisService/GetTravels" message="tns:IAirNautisService_GetTravels_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAirNautisService/GetTravelsResponse" message="tns:IAirNautisService_GetTravels_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertAirplane">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAirNautisService/InsertAirplane" message="tns:IAirNautisService_InsertAirplane_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAirNautisService/InsertAirplaneResponse" message="tns:IAirNautisService_InsertAirplane_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateHangar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAirNautisService/CreateHangar" message="tns:IAirNautisService_CreateHangar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAirNautisService/CreateHangarResponse" message="tns:IAirNautisService_CreateHangar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NewOutgoingTravel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAirNautisService/NewOutgoingTravel" message="tns:IAirNautisService_NewOutgoingTravel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAirNautisService/NewOutgoingTravelResponse" message="tns:IAirNautisService_NewOutgoingTravel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NewIncomingTravel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAirNautisService/NewIncomingTravel" message="tns:IAirNautisService_NewIncomingTravel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAirNautisService/NewIncomingTravelResponse" message="tns:IAirNautisService_NewIncomingTravel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditAirplane">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAirNautisService/EditAirplane" message="tns:IAirNautisService_EditAirplane_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAirNautisService/EditAirplaneResponse" message="tns:IAirNautisService_EditAirplane_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActivateAirplane">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAirNautisService/ActivateAirplane" message="tns:IAirNautisService_ActivateAirplane_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAirNautisService/ActivateAirplaneResponse" message="tns:IAirNautisService_ActivateAirplane_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeactivateAirplane">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAirNautisService/DeactivateAirplane" message="tns:IAirNautisService_DeactivateAirplane_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAirNautisService/DeactivateAirplaneResponse" message="tns:IAirNautisService_DeactivateAirplane_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IAirNautisService" type="tns:IAirNautisService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAirplaneById">
+      <soap:operation soapAction="http://tempuri.org/IAirNautisService/GetAirplaneById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllAirplanes">
+      <soap:operation soapAction="http://tempuri.org/IAirNautisService/GetAllAirplanes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAirplaneTravels">
+      <soap:operation soapAction="http://tempuri.org/IAirNautisService/GetAirplaneTravels" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHangarAirplanes">
+      <soap:operation soapAction="http://tempuri.org/IAirNautisService/GetHangarAirplanes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOutAirplanes">
+      <soap:operation soapAction="http://tempuri.org/IAirNautisService/GetOutAirplanes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllHangars">
+      <soap:operation soapAction="http://tempuri.org/IAirNautisService/GetAllHangars" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAvaiableHangars">
+      <soap:operation soapAction="http://tempuri.org/IAirNautisService/GetAvaiableHangars" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActiveAirplanes">
+      <soap:operation soapAction="http://tempuri.org/IAirNautisService/GetActiveAirplanes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInactiveAirplanes">
+      <soap:operation soapAction="http://tempuri.org/IAirNautisService/GetInactiveAirplanes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHangar">
+      <soap:operation soapAction="http://tempuri.org/IAirNautisService/GetHangar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAirplanesByHangar">
+      <soap:operation soapAction="http://tempuri.org/IAirNautisService/GetAirplanesByHangar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTravels">
+      <soap:operation soapAction="http://tempuri.org/IAirNautisService/GetTravels" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertAirplane">
+      <soap:operation soapAction="http://tempuri.org/IAirNautisService/InsertAirplane" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateHangar">
+      <soap:operation soapAction="http://tempuri.org/IAirNautisService/CreateHangar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewOutgoingTravel">
+      <soap:operation soapAction="http://tempuri.org/IAirNautisService/NewOutgoingTravel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewIncomingTravel">
+      <soap:operation soapAction="http://tempuri.org/IAirNautisService/NewIncomingTravel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditAirplane">
+      <soap:operation soapAction="http://tempuri.org/IAirNautisService/EditAirplane" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActivateAirplane">
+      <soap:operation soapAction="http://tempuri.org/IAirNautisService/ActivateAirplane" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeactivateAirplane">
+      <soap:operation soapAction="http://tempuri.org/IAirNautisService/DeactivateAirplane" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AirNautisService">
+    <wsdl:port name="BasicHttpBinding_IAirNautisService" binding="tns:BasicHttpBinding_IAirNautisService">
+      <soap:address location="http://localhost:60969/AirNautisService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

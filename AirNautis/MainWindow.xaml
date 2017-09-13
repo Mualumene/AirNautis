@@ -1,0 +1,60 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:AirNautis" x:Class="AirNautis.MainWindow"
+        Title="AirNautis" Height="356" Width="368" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded_1" Icon="paper_airplane_icon.ico">
+    
+    
+    
+    <Grid>
+        <Menu VerticalAlignment="Top" Grid.ColumnSpan="2">
+            <MenuItem Header="_Menu">
+                <MenuItem Header="_Add Hangar" Click="NewHangar_Click"/>
+                <MenuItem Header="_Add Airplane" Click="NewAirplane_Click"/>
+                <Separator/>
+                <MenuItem Header="_Exit" Click="Exit_Click"/>
+                
+            </MenuItem>
+            
+
+            <MenuItem Header="_Airplane">
+                <MenuItem Header="_Reactivate Airplane" Click="Activate_Click"/>
+                <MenuItem Header="_Deactivate Airplane" Click="Deactivate_Click"/>
+                <Separator/>
+                <MenuItem Header="_Full Details" Click="Details_Click"/>
+
+            </MenuItem>
+
+            <MenuItem Header="_Flight">
+                <MenuItem Header="_Outgoing Flight" Click="Outgoing_Click"/>
+                <MenuItem Header="_Incoming Flight" Click="Incoming_Click"/>
+                <Separator/>
+                <MenuItem Header="_Historic of Flights" Click="Historic_Click"/>
+
+            </MenuItem>
+
+            <MenuItem Header="_Hangar">
+                <MenuItem Header="_View Hangar Details" Click="DetailsHangar_Click"/>
+
+            </MenuItem>
+
+
+            <MenuItem Header="_Refresh" Click="Refresh_Click"/>
+
+        </Menu>
+        <DataGrid Name="dgMain" ItemsSource="{Binding Airplane}"  HorizontalAlignment="Left" Height="241" Margin="28,54,0,0" VerticalAlignment="Top" Width="291"
+                  AutoGenerateColumns="False" MouseDoubleClick="dgMain_MouseDoubleClick_1" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Model" Binding="{Binding Path= Model}" Width="150"/>
+                <DataGridTextColumn Header="Hangar Number" Binding="{Binding Path= Hangar}" Width="100"/>
+            </DataGrid.Columns>
+            
+        </DataGrid>
+        
+        
+        <GroupBox Header="Double click to see more info" HorizontalAlignment="Left" Margin="10,23,0,0" VerticalAlignment="Top" Height="288" Width="329"/>
+
+
+
+    </Grid>
+</Window>

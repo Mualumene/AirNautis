@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AirNautisModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Airplane">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Model" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Year" Type="Int32" Nullable="false" />
+    <Property Name="Capacity" Type="Int32" Nullable="false" />
+    <Property Name="Hangar" Type="Int32" />
+    <NavigationProperty Name="Hangar1" Relationship="Self.FK_Airplane_Hangar" FromRole="Airplane" ToRole="Hangar" />
+    <NavigationProperty Name="Travel" Relationship="Self.FK_Travel_Airplane" FromRole="Airplane" ToRole="Travel" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Hangar">
+    <Key>
+      <PropertyRef Name="Number" />
+    </Key>
+    <Property Name="Number" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Capacity" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Airplane" Relationship="Self.FK_Airplane_Hangar" FromRole="Hangar" ToRole="Airplane" />
+  </EntityType>
+  <EntityType Name="Travel">
+    <Key>
+      <PropertyRef Name="Date" />
+      <PropertyRef Name="Airplane" />
+    </Key>
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Airplane" Type="Int32" Nullable="false" />
+    <Property Name="Origin" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Destination" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Airplane1" Relationship="Self.FK_Travel_Airplane" FromRole="Travel" ToRole="Airplane" />
+  </EntityType>
+  <Association Name="FK_Airplane_Hangar">
+    <End Role="Hangar" Type="Self.Hangar" Multiplicity="0..1" />
+    <End Role="Airplane" Type="Self.Airplane" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Hangar">
+        <PropertyRef Name="Number" />
+      </Principal>
+      <Dependent Role="Airplane">
+        <PropertyRef Name="Hangar" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Travel_Airplane">
+    <End Role="Airplane" Type="Self.Airplane" Multiplicity="1" />
+    <End Role="Travel" Type="Self.Travel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Airplane">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Travel">
+        <PropertyRef Name="Airplane" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="AirNautisEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Airplane" EntityType="Self.Airplane" />
+    <EntitySet Name="Hangar" EntityType="Self.Hangar" />
+    <EntitySet Name="Travel" EntityType="Self.Travel" />
+    <AssociationSet Name="FK_Airplane_Hangar" Association="Self.FK_Airplane_Hangar">
+      <End Role="Hangar" EntitySet="Hangar" />
+      <End Role="Airplane" EntitySet="Airplane" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Travel_Airplane" Association="Self.FK_Travel_Airplane">
+      <End Role="Airplane" EntitySet="Airplane" />
+      <End Role="Travel" EntitySet="Travel" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

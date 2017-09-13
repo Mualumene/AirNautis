@@ -1,0 +1,19 @@
+﻿<Window x:Class="AirNautis.Historic_Travel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Historic of Flights" Height="272.933" Width="509.774" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize" Icon="paper_airplane_icon.ico">
+    <Grid>
+
+        <DataGrid Name="dgHistoric" ItemsSource="{Binding Travel}"  HorizontalAlignment="Left" Height="213" Margin="10,10,0,0" VerticalAlignment="Top" Width="468"
+                  AutoGenerateColumns="False" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Date" Binding="{Binding Path= Date}" Width="150"/>
+                <DataGridTextColumn Header="Airplane" Binding="{Binding Path= Airplane}" Width="100"/>
+                <DataGridTextColumn Header="Origin" Binding="{Binding Path= Origin}" Width="100"/>
+                <DataGridTextColumn Header="Destination" Binding="{Binding Path= Destination}" Width="100"/>
+            </DataGrid.Columns>
+
+        </DataGrid>
+
+    </Grid>
+</Window>

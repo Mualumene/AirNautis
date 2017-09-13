@@ -1,0 +1,17 @@
+﻿<Window x:Class="AirNautis.New_Airplane"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="New Airplane" Height="200" Width="380" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize" Icon="paper_airplane_icon.ico">
+    <Grid>
+        <Label Content="Model" HorizontalAlignment="Left" Margin="27,24,0,0" VerticalAlignment="Top" Width="77"/>
+        <Label Content="Year" HorizontalAlignment="Left" Margin="27,55,0,0" VerticalAlignment="Top" Width="77"/>
+        <Label Content="Capacity" HorizontalAlignment="Left" Margin="27,86,0,0" VerticalAlignment="Top" Width="77"/>
+        
+        <TextBox Name="txtBoxModel" HorizontalAlignment="Left" Height="23" Margin="104,27,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="227"/>
+        <TextBox Name="txtBoxYear" HorizontalAlignment="Left" Height="23" Margin="104,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="227"/>
+        <TextBox Name="txtBoxCapacity" HorizontalAlignment="Left" Height="23" Margin="104,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="227"/>
+
+        
+        <Button Name="btnAddAirplane" Content="Add Airplane" HorizontalAlignment="Left" Margin="27,127,0,0" VerticalAlignment="Top" Width="304" Click="btnAddAirplane_Click"/>
+    </Grid>
+</Window>

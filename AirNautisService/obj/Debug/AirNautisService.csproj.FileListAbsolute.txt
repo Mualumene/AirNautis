@@ -1,0 +1,14 @@
+C:\Users\Ricardo\Documents\Visual Studio 2012\Projects\AirNautis\AirNautisService\bin\AirNautisService.dll
+C:\Users\Ricardo\Documents\Visual Studio 2012\Projects\AirNautis\AirNautisService\bin\AirNautisService.pdb
+C:\Users\Ricardo\Documents\Visual Studio 2012\Projects\AirNautis\AirNautisService\bin\EntityFramework.dll
+C:\Users\Ricardo\Documents\Visual Studio 2012\Projects\AirNautis\AirNautisService\bin\EntityFramework.xml
+C:\Users\Ricardo\Documents\Visual Studio 2012\Projects\AirNautis\AirNautisService\obj\Debug\AirNautisService.dll
+C:\Users\Ricardo\Documents\Visual Studio 2012\Projects\AirNautis\AirNautisService\obj\Debug\AirNautisService.pdb
+C:\Users\Ricardo\Documents\Visual Studio 2012\Projects\AirNautis\AirNautisService\obj\Debug\AirNautisService.csprojResolveAssemblyReference.cache
+C:\Users\Luís\Desktop\8090242 e 8090228\AirNautis\AirNautisService\bin\AirNautisService.dll
+C:\Users\Luís\Desktop\8090242 e 8090228\AirNautis\AirNautisService\bin\AirNautisService.pdb
+C:\Users\Luís\Desktop\8090242 e 8090228\AirNautis\AirNautisService\bin\EntityFramework.dll
+C:\Users\Luís\Desktop\8090242 e 8090228\AirNautis\AirNautisService\bin\EntityFramework.xml
+C:\Users\Luís\Desktop\8090242 e 8090228\AirNautis\AirNautisService\obj\Debug\AirNautisService.csprojResolveAssemblyReference.cache
+C:\Users\Luís\Desktop\8090242 e 8090228\AirNautis\AirNautisService\obj\Debug\AirNautisService.dll
+C:\Users\Luís\Desktop\8090242 e 8090228\AirNautis\AirNautisService\obj\Debug\AirNautisService.pdb

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="9f50af4f-7644-4595-ad77-b9040bde0c02" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:60969/AirNautisService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AirNautisService.xsd" MetadataType="Schema" ID="9d3aa9d8-7196-4b7c-abbe-c24885c0a8f7" SourceId="1" SourceUrl="http://localhost:60969/AirNautisService.svc?xsd=xsd0" />
+    <MetadataFile FileName="AirNautisService.disco" MetadataType="Disco" ID="5e399f8b-423a-42e3-a862-3f7900afcb2c" SourceId="1" SourceUrl="http://localhost:60969/AirNautisService.svc?disco" />
+    <MetadataFile FileName="AirNautisService.wsdl" MetadataType="Wsdl" ID="0ee0b70d-d825-4c28-bb87-476c33489e61" SourceId="1" SourceUrl="http://localhost:60969/AirNautisService.svc?wsdl" />
+    <MetadataFile FileName="AirNautisService1.xsd" MetadataType="Schema" ID="f9611fff-9d98-4d70-9a42-05558e93879b" SourceId="1" SourceUrl="http://localhost:60969/AirNautisService.svc?xsd=xsd1" />
+    <MetadataFile FileName="AirNautisService2.xsd" MetadataType="Schema" ID="a5990138-006d-46a3-87db-80f1769b69ef" SourceId="1" SourceUrl="http://localhost:60969/AirNautisService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
